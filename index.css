@@ -1,8 +1,3 @@
-@font-face {
-  font-family: TBN;
-  src: url(shower/themes/yamaps/fonts/TBN55.otf) format("opentype");
-}
-
 #Cover .slidein,
 .slide.map .slidein,
 .slide.map-pano .slidein,
@@ -30,7 +25,6 @@
 #Cover .name,
 #Cover .author
 {
-    /*font-family: TBN;*/
     font-family: 'PT Sans Narrow';
     font-size: 40px;
     font-weight: normal;
