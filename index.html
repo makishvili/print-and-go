@@ -460,6 +460,13 @@
             <img  class='yashot yashot-a yashot-2' src='pictures/competitor/ya-pano-album2.jpg' alt=''>
         </div>
     </section>
+
+    <section class='slide shout'>
+        <div class='slidein'>
+            <h2>Печать на <br><span class='red'>Я</span><span class='black'>ндекс.</span><span class='green'>Картах</span></h2>
+        </div>
+    </section>
+
 <!-- /Яндекс -->
 
 <section class='slide shout'>
@@ -505,12 +512,25 @@
             <li>как фильтровали браузеры</li>
             <li>как обошлись с IE</li>
             <li>...</li>
-            <li class='next'>как напечатать фон?</li>
+            <li>как напечатать фон?</li>
         </ul>
     </div>
 </section>
 
-<section class='slide'>
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>В поисках раскладки</h2>
+
+        <div class='l'>
+            <div class='l-h'> Шапка </div>
+            <div class='l-c'> Карта </div>
+            <div class='l-f'> Подвал </div>
+        </div>
+
+    </div>
+</section>
+
+<section class='slide layout'>
     <div class='slidein'>
         <h2>В поисках раскладки</h2>
 
@@ -518,8 +538,36 @@
             <mark>Quirks Mode</mark>
             <code>&lt;table height='<mark>100%</mark>'&gt;</code>
             <code>    ...</code>
-            <code>&lt;/table&gt;</code>
+            <code>&lt;/table&gt;
+            </code>
+            <code>td.map {</code>
+            <code>    height: <mark>100%</mark></code>
+            <code>}</code>
         </pre>
+
+        <div class='l'>
+            <div class='l-h'>&lt;td&gt; Шапка &lt;/td&gt;</div>
+            <div class='l-c'>&lt;td class='map'&gt; Карта &lt;/td&gt;</div>
+            <div class='l-f'>&lt;td&gt; Подвал &lt;/td&gt;</div>
+        </div>
+
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>В поисках раскладки</h2>
+
+        <pre>
+            <mark>Javascript?</mark>
+        </pre>
+
+        <div class='l'>
+            <div class='l-h'>&lt;td&gt; Шапка &lt;/td&gt;</div>
+            <div class='l-c'>&lt;td class='map'&gt; Карта &lt;/td&gt;</div>
+            <div class='l-f'>&lt;td&gt; Подвал &lt;/td&gt;</div>
+        </div>
+
     </div>
 </section>
 
@@ -584,7 +632,13 @@
         </div>
         <div class='next'>
             <div class='bro opera'    style='left: 610px; top: 300px'></div>
+            <div class='fade'         style='left: 610px; top: 300px; opacity: 1;'>
+                <div class='bro opera'></div>
+            </div>
             <div class='bro ff'       style='left: 740px; top: 300px'></div>
+            <div class='fade'         style='left: 740px; top: 300px; opacity: 1;'>
+                <div class='bro ff'></div>
+            </div>
         </div>
         <div class='next'>
             <div class='bro ie disabled'       style='left: 600px; top: 490px'></div>
@@ -613,7 +667,7 @@
         <pre>
             <code><mark class='comment'>/* Обнулить поля */</mark></code>
             <code>@page {</code>
-            <code>    margin: <mark>0</mark></code>
+            <code>    margin: 0</code>
             <code>}</code>
         </pre>
 
@@ -631,9 +685,11 @@
         <pre>
             <code><mark class='comment'>/* Обнулить поля */</mark></code>
             <code>@page {</code>
-            <code>    margin: <mark>0</mark></code>
+            <code>    margin: <mark class="important">0</mark></code>
             <code>}</code>
         </pre>
+
+        <p class='note'><em>Не работает?</em></p>
 
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera1.jpg' alt=''>
         <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
@@ -650,6 +706,8 @@
             <code>}</code>
         </pre>
 
+        <p class='note'><em>Заработало!</em></p>
+
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera2.jpg' alt=''>
         <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
     </div>
@@ -661,11 +719,11 @@
         <pre>
             <code><mark class='comment'>/* Изменить поля */</mark></code>
             <code>@page {</code>
-            <code>    margin: <mark>1cm</mark></code>
+            <code>    margin: 1cm</code>
             <code>}</code>
         </pre>
 
-        <p class='note'><em>Баг: увеличивает дефолт</em></p>
+        <p class='note'><em>Точка отсчёта - <br>дефолтные отступы, <br>а не край листа</em></p>
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera3.jpg' alt=''>
         <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
     </div>
@@ -720,11 +778,11 @@
     </div>
 </section>
 
-<section class='slide'>
+<section class='slide qr'>
     <div class='slidein'>
-        <h2>bolk@: фильтрация стилей для Opera</h2>
+        <h2>bolk@ &laquo;взламывает&raquo; Оперу</h2>
 
-        <div style='text-align: center; line-height: 1.4em; margin-top:  -15px;'>
+        <div>
             <img src='pictures/browsers/bolknote.gif' alt=''><br>
             <a href='http://clck.ru/8hBQu'>http://clck.ru/8hBQu</a>
         </div>
@@ -779,11 +837,11 @@
         <div class='next'>
             <div class='bro opera'  style='left: 770px; top: 350px'></div>
             <div class='fade'       style='left: 770px; top: 350px; opacity: 1;'>
-                <div class='bro opera'  style='top: 10px; width: 60px; opacity: 1'></div>
+                <div class='bro opera'></div>
             </div>
             <div class='bro safari' style='left: 900px; top: 350px'></div>
             <div class='fade'       style='left: 900px; top: 350px; opacity: 1;'>
-                <div class='bro safari' style='top: 10px; width: 60px; opacity: 1'></div>
+                <div class='bro safari'></div>
             </div>
         </div>
         <div class='next'>
@@ -899,7 +957,7 @@
 
         <pre class='small'>
             <code>div {</code>
-            <code>    position: absolute</code>
+            <code>    <mark>position: absolute<mark></code>
             <code>    left: 0</code>
             <code>    right: 0</code>
             <code>}</code>
@@ -1740,6 +1798,8 @@
         </pre>
 
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet.jpg' alt=''>
+        <div class='bro chrome'  style='left: 410px; bottom: 10px;'></div>
+
     </div>
 </section>
 
@@ -1754,7 +1814,23 @@
         </pre>
 
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera1.jpg' alt=''>
-        <div class='bro chrome'  style='left: 410px; bottom: 10px;'></div>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>@page</h2>
+        <pre>
+            <code><mark class='comment'>/* Обнулить поля */</mark></code>
+            <code>@page {</code>
+            <code>    margin: 0</code>
+            <code>}</code>
+        </pre>
+
+        <p class="note" style="font-size:  200%;"><em>Молодец!</em></p>
+
+        <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera1.jpg' alt=''>
+        <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
     </div>
 </section>
 
@@ -1783,9 +1859,158 @@
     </div>
 </section>
 
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Неверный центр<br>карты</h2>
+
+        <div class='l l-abs l-map l-map-r'>
+            <div class='next l-h'>Шапка</div>
+            <div class='l-c' style="height: 100%"></div>
+            <div class='l-point'></div>
+            <div class='next l-f'>Подвал</div>
+        </div>
+
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Неверный центр<br>карты</h2>
+
+        <div class='l l-abs l-map l-map-r'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-c'></div>
+            <div class='l-point'></div>
+            <div class='l-f l-f-big'>Подвал</div>
+        </div>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Неверный центр<br>карты</h2>
+
+        <div class='l l-abs l-map l-map-r'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-p'>Панорама</div>
+            <div class='l-c'></div>
+            <div class='l-point'></div>
+            <div class='l-f'>Подвал</div>
+        </div>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <div class='l l-abs l-map'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-p'>Панорама</div>
+            <div class='l-c'></div>
+            <div class='l-point'></div>
+            <div class='l-f'>Подвал</div>
+        </div>
+        <div class='l l-abs l-map l-map-r'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-c'></div>
+            <div class='l-point'></div>
+            <div class='l-f l-f-big'>Подвал</div>
+        </div>
+    </div>
+</section>
+
+<section class='slide cover'>
+    <div class='slidein'>
+        <img src='pictures/print-map-msk-btn2.jpg' alt=''>
+    </div>
+</section>
+
+
+
+<!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
+
+
+
+
+
+
+
+
+
+
+
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Переместить центр<br> карты</h2>
+
+        <pre class="small">
+            <code>&lt;style media="print and
+             (orientation:portrait)"&gt;</code>
+            <code>    .view .map {</code>
+            <code>        <mark>top: -35px</mark></code>
+            <code>    }</code>
+            <code>&lt;/style&gt;</code>
+        </pre>
+
+        <div class='l l-abs l-map l-map-r'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-c'></div>
+            <div class='l-point' style="margin-top:  -95px;"></div>
+            <div class='l-f l-f-big'>Подвал</div>
+        </div>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Переместить центр<br> карты</h2>
+
+        <pre class="small">
+            <code>&lt;style media="print and
+             (orientation:portrait)"&gt;</code>
+            <code>    .view .map {</code>
+            <code>        <mark>top: 75px</mark></code>
+            <code>    }</code>
+            <code>&lt;/style&gt;</code>
+        </pre>
+
+        <div class='l l-abs l-map l-map-r'>
+            <div class='l-h'>Шапка</div>
+            <div class='l-p'>Панорама</div>
+            <div class='l-c'></div>
+            <div class='l-point' style="margin-top: 50px;"></div>
+            <div class='l-f'>Подвал</div>
+        </div>
+    </div>
+</section>
+
+
+<section class='slide qr'>
+    <div class='slidein'>
+        <h2>jQuery.injectCSS</h2>
+
+        <div>
+            <img src='pictures/injectcss.png' alt=''><br>
+            <a href='http://clck.ru/8hvkH'>http://clck.ru/8hvkH</a>
+        </div>
+    </div>
+</section>
+
+
 <section class='slide shout'>
     <div class='slidein'>
         <h2>Фон</h2>
+    </div>
+</section>
+
+<section class='slide shout'>
+    <div class='slidein'>
+        <div class='mask'>
+            <pre class='biggest' style='position: absolute; left: 10px; top: 300px; opacity: 0.5'>
+                <code>bgcolor, background</code>
+            </pre>
+            <div class='mask-deny'></div>
+        </div>
     </div>
 </section>
 
@@ -1813,11 +2038,11 @@
     </div>
 </section>
 
-<section class='slide'>
+<section class='slide qr'>
     <div class='slidein'>
         <h2>CSSWG: &laquo;Как включить печать фона?&raquo;</h2>
 
-        <div style='text-align: center; line-height: 1.4em; margin-top:  -15px;'>
+        <div>
             <img src='pictures/browsers/adjust.gif' alt=''><br>
             <a href='http://clck.ru/8hLnN'>http://clck.ru/8hLnN</a>
         </div>
@@ -2597,7 +2822,7 @@
 
         <pre>
             <code>...</code>
-            <code>border-image: url(fox.png) 100 0 0 0 / auto repeat;</code>
+            <code>border-image: url(box.png) 100 0 0 0 / auto repeat;</code>
             <code>...</code>
         </pre>
     </div>

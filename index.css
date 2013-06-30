@@ -442,6 +442,19 @@
     background-size: cover;
 }
 
+.screen-ya .fade
+{
+    background: #f8f8f8
+}
+
+.fade .bro
+{
+    top: 10px;
+    width: 60px;
+
+    opacity: 1;
+}
+
 .disabled
 {
     -webkit-filter: grayscale(100%);
@@ -524,6 +537,16 @@
 
 }
 
+.l-map-r
+{
+    top:  15px;
+    right:  130px;
+    left:  auto;
+
+    height: 599px;
+
+}
+
 .l-map .l-h
 {
     height: 65px;
@@ -539,6 +562,7 @@
 }
 
 .l-h,
+.l-p,
 .l-c,
 .l-f
 {
@@ -556,12 +580,40 @@
     line-height: 100px;
 }
 
+.l-point
+{
+    position: absolute;
+    left: 50%;
+    top:  50%;
+    z-index:  10;
+
+    width:  37px;
+    height:  42px;
+    margin:  -21px 0 0 -18px;
+
+    background: url(pictures/point.png) 0 0 no-repeat;
+}
+
+
 .l-h
 {
     top: 0;
     z-index:  10;
 
     background:  dodgerblue;
+}
+
+.l-p
+{
+    top: 66px;
+    height:  150px;
+    z-index:  10;
+
+    line-height:  150px;
+
+    background: #e87483;
+
+    color: #fff;
 }
 
 .l-c
@@ -584,6 +636,12 @@
     background:  lightgreen;
 }
 
+.l-f-big
+{
+    height:  200px !important;
+    line-height:  200px !important;
+}
+
 .l-abs .l-h,
 .l-abs .l-f
 {
@@ -594,6 +652,11 @@
 .l-map .l-f
 {
     box-shadow: 0 0 16px #666;
+}
+
+.l-map .l-p
+{
+    box-shadow: 0 5px 10px #666;
 }
 
 .l-abs .l-c
@@ -737,7 +800,32 @@ pre.biggest code
     font-family: "PT Sans Narrow";
 }
 
-.final p
+.qr .slidein
 {
-    /*color:  #666;*/
+    height:  600px;
+
+    padding-top: 40px;
+    padding-bottom: 0;
 }
+
+.qr h2
+{
+    position: relative;
+    /*left:  -50px;*/
+    
+    margin-bottom:  1.5em;
+}
+
+.qr img
+{
+    margin-bottom:  1em;
+}
+
+.qr div
+{
+    text-align: center;
+    line-height: 1.4em;
+    margin-top:  -15px;
+}
+
+
