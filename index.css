@@ -1,3 +1,28 @@
+/*
+    Москва, БЦ Мамонтов, Лекторий.
+    Проектор:
+    - Color Mode: sRGB
+    - Brightness: 0
+    - Contrast: -15
+    - Sharpness: 3
+*/
+
+/* Для неярких экранов */
+/*section::before*/
+section:not(.slide-iframe)::before
+{
+    content: '';
+    position : absolute;
+    width: 100%;
+    height: 100%;
+
+    font-size:  300%;
+    background: #000;
+    z-index: 99999;
+    
+    opacity:  0.2;
+}
+
 #Cover .slidein,
 .slide.map .slidein,
 .slide.map-pano .slidein,
@@ -178,6 +203,7 @@
 {
     top: 95px;
     left:  340px;
+
     box-shadow: 3px 8px 26px rgba(50, 50, 50, 0.5);
 }
 
@@ -185,6 +211,7 @@
 {
     top: 110px;
     left:  660px;
+
     box-shadow: 3px 16px 26px rgba(50, 50, 50, 0.5);
 }
 
@@ -779,7 +806,7 @@ pre.biggest code
 
 .recomendation li
 {
-    margin-bottom:  2em;
+    margin-bottom:  1.5em;
 
     font-weight: bold;
     font-style: italic;
@@ -791,7 +818,7 @@ pre.biggest code
 {
     font-weight: normal;
     
-    margin-left:  6em;
+    margin-left:  4em;
     font-style: normal;
 }
 
