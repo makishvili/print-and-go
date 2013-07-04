@@ -8,7 +8,7 @@
 */
 
 /* Для неярких экранов */
-/*section::before*/
+/*
 section:not(.slide-iframe)::before
 {
     content: '';
@@ -22,6 +22,7 @@ section:not(.slide-iframe)::before
     
     opacity:  0.2;
 }
+*/
 
 #Cover .slidein,
 .slide.map .slidein,
