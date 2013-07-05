@@ -385,7 +385,7 @@
 
 <section class='slide'>
     <div class='slidein'>
-        <h2>Недостатки:</h2>
+        <h2>Недостатки существующих решений:</h2>
         <ul>
             <li>Карта маленькая</li>
             <li>Подача информации неоптимальная</li>
@@ -2094,9 +2094,9 @@
 <section class='slide wide'>
     <div class='slidein'>
         <div class='l l-abs l-map'>
-            <div class='l-h' style='background:  #fff;'>&lt;div class='head'&gt; Шапка &lt;/div&gt;</div>
-            <div class='l-c'>&lt;div class='map'&gt; Карта &lt;/div&gt;</div>
-            <div class='l-f' style='background:  #fff;'>&lt;div class='foot'&gt; Подвал &lt;/div&gt;</div>
+            <div class='l-h next' style='background:  #fff;'>&lt;div class='head'&gt; Шапка &lt;/div&gt;</div>
+            <div class='l-c' style="height: 598px">&lt;div class='map'&gt; Карта &lt;/div&gt;</div>
+            <div class='l-f next' style='background:  #fff;'>&lt;div class='foot'&gt; Подвал &lt;/div&gt;</div>
         </div>
 
         <span class='next'>
@@ -2412,10 +2412,10 @@
         </pre>
 
         <pre class='small' style='position: absolute; top: 192px; left: 550px'>
-            <code style='counter-reset: code 14'><mark class='important'>.head:before</mark> {</code>
+            <code style='counter-reset: code 14'><mark class='important'>.head::before</mark> {</code>
             <code>    border-color: green</code>
             <code>}</code>
-            <code><mark class='important'>.foot:before</mark> {</code>
+            <code><mark class='important'>.foot::before</mark> {</code>
             <code>    border-color: red</code>
             <code>}</code>
         </pre>
