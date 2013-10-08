@@ -1687,7 +1687,7 @@
         <h2>Фильтруем браузеры</h2>
 
         <pre class='small'>
-            <code>(function (jQuery) {</code>
+            <code>(function () {</code>
             <code>    var ua = navigator.userAgent;</code>
             <code>    var browser = jQuery.browser;</code>
             <code>    var browserName;
@@ -1703,7 +1703,7 @@
             <code>    if (browserName) {</code>
             <code>        document.<mark>documentElement.className</mark> += (' ' + browserName);</code>
             <code>    }</code>
-            <code>}(jQuery));</code>
+            <code>}());</code>
         </pre>
 
         <div class='next mask'>
@@ -2038,12 +2038,6 @@
 <section class='slide wide slide-iframe'>
     <div class='slidein'>
         <iframe height='640px' width='1024' src='sites/dog2/index.html'></iframe>
-    </div>
-</section>
-
-<section class='slide wide slide-iframe'>
-    <div class='slidein'>
-        <iframe height='640px' width='1024' src='sites/dog1/index.html'></iframe>
     </div>
 </section>
 
