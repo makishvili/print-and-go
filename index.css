@@ -652,14 +652,25 @@ section:not(.slide-iframe)::before
 
 .l-c
 {
+    position: relative;
+    overflow: hidden;
     top: 105px;
     height:  360px;
     z-index:  5;
 
-    background:  yellow;
-
+    /*background:  yellow;*/
 
     line-height: 360px;
+}
+
+.l-c img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -365px 0 0 -385px;
+    width: 750px;
+    height: 750px;
 }
 
 .l-f
