@@ -725,6 +725,12 @@ pre.small code
     line-height:  30px !important;
 }
 
+pre.small-medium code
+{
+    font-size:  80%;
+    line-height:  40px !important;
+}
+
 pre.medium code
 {
     font-size:  100%;

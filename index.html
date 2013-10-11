@@ -1844,9 +1844,185 @@
     </div>
 </section>
 
+<!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
+
+<section class='slide shout'>
+    <div class='slidein'>
+        <h2>Адаптивный комментарий</h2>
+    </div>
+</section>
+
+<section class='slide wide screen screen-ya'>
+    <div class='slidein'>
+        <img  class='yashot yashot-p yashot-1' src='pictures/competitor/ya-comment-big1.jpg' alt=''>
+        <img  class='yashot yashot-p yashot-2' src='pictures/competitor/ya-comment-big2.jpg' alt=''>
+        <!--<span class='arr arr-right-ok' style='top: 10px; left: 360px;'></span>-->
+    </div>
+</section>
+
+<section class='slide wide screen screen-ya'>
+    <div class='slidein'>
+        <img  class='yashot yashot-p' src='pictures/competitor/ya-comment.jpg' alt=''>
+        <span class='arr arr-left-ok' style='bottom: -10px; left: 735px;'></span>
+    </div>
+</section>
+
+<section class='slide wide screen'>
+    <div class='slidein'>
+        <h2 style="position: absolute; top: 500px; left: 120px">5 строк</h2>
+        <img  class='yashot yashot-p' src='pictures/competitor/ya-comment-5.jpg' alt=''>
+    </div>
+</section>
+
+<section class='slide cover'>
+    <div class='slidein'>
+        <img src='pictures/print-map-msk-btn2.jpg' alt=''>
+    </div>
+</section>
+
 <section class='slide layout'>
     <div class='slidein'>
-        <h2>&laquo;Неверный&raquo; центр<br>карты</h2>
+        <h2>Комментарий на второй лист:</h2>
+
+        <pre class="small-medium">
+            <code>if (footerHeight > 86) {</code>
+            <code>    footer.addClass('footer_on-next-page');</code>
+            <code>}</code>
+        </pre>
+
+        <pre class="small-medium">
+            <code>@media print {</code>
+            <code>    .footer_on-next-page {</code>
+            <code>        <mark class="comment">/* Отправляется на второй лист */</mark></code>
+            <code>        <mark>position: static</mark></code>
+            <code>    }</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class='slide wide screen'>
+    <div class='slidein'>
+        <h2 style="position: absolute; top: 400px; left: 120px">15 строк</h2>
+        <img  class='yashot yashot-p' src='pictures/competitor/ya-comment-15.jpg' alt=''>
+    </div>
+</section>
+
+<section class='slide wide screen'>
+    <div class='slidein'>
+        <h2 style="position: absolute; top: 300px; left: 120px">15 ?</h2>
+        <img  class='yashot yashot-a' src='pictures/competitor/ya-comment-album-15.jpg' alt=''>
+    </div>
+</section>
+
+<section class='slide wide screen'>
+    <div class='slidein'>
+        <h2 style="position: absolute; top: 360px; left: 50px">10 строк</h2>
+        <img  class='yashot yashot-a' src='pictures/competitor/ya-comment-album-10.jpg' alt=''>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Хочется изящества:</h2>
+
+        <pre class="small-medium">
+            <code>if ((footerHeight > <mark>160</mark> && page.orientation === <mark>'landscape'</mark>) ||
+    (footerHeight > <mark class="one">240</mark> && page.orientation === <mark class="one">'portrait'</mark>)) { </code>
+            <code>          footer.addClass('footer_on-next-page'); </code>
+            <code>}</code>
+        </pre>
+
+        <figure style="position: absolute; bottom: 10px; color: gray;">
+            <blockquote><p>Изящество - изысканная, тонкая красота.</p></blockquote>
+            <figcaption>Толковый словарь Ушакова</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Хочется изящества:</h2>
+
+        <pre class="small-medium" style="opacity: 0.5">
+            <code>if ((footerHeight > <mark>160</mark> && page.orientation === <mark>'landscape'</mark>) ||
+    (footerHeight > <mark class="one">240</mark> && page.orientation === <mark class="one">'portrait'</mark>)) { </code>
+            <code>          footer.addClass('footer_on-next-page'); </code>
+            <code>}</code>
+        </pre>
+
+        <pre class="small-medium">
+            <code>if (footerHeight > <mark>160</mark>) { </code>
+            <code>    footer.addClass('footer_on-next-page_<mark>for-landscape</mark>'); </code>
+            <code>} else if (footerHeight > <mark class="one">240</mark>) { </code>
+            <code>    footer.addClass('footer_on-next-page_<mark class="one">for-portrait</mark>'); </code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Наша красота:</h2>
+
+        <pre class="small-medium">
+            <code>if (footerHeight > <mark>160</mark>) { </code>
+            <code>    footer.addClass('footer_on-next-page_<mark>for-landscape</mark>'); </code>
+            <code>} else if (footerHeight > <mark class="one">240</mark>) { </code>
+            <code>    footer.addClass('footer_on-next-page_<mark class="one">for-portrait</mark>'); </code>
+            <code>}</code>
+        </pre>
+
+        <pre class="small-medium">
+            <code>@media print and <mark>(orientation:landscape)</mark> {</code>
+            <code>     .footer_on-next-page_<mark>for-landscape</mark> { position: static }</code>
+            <code>}</code>
+            <code>@media print and <mark class="one">(orientation:portrait)</mark> {</code>
+            <code>     .footer_on-next-page_<mark class="one">for-portrait</mark> { position: static }</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Наша красота:</h2>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <pre class="small-medium">
+            <code>@media print {</code>
+            <code>     .footer_on-next-page_<mark>for-landscape</mark> { position: static }</code>
+            <code>}</code>
+            <code>@media print and <mark class="one">(orientation:portrait)</mark> {</code>
+            <code>     .footer_on-next-page_<mark class="one">for-portrait</mark> { position: static }</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class='slide wide screen'>
+    <div class='slidein'>
+        <img  class='yashot yashot-p yashot-1' src='pictures/competitor/ya-comment-15.jpg' alt=''>
+        <img  class='yashot yashot-a yashot-2' src='pictures/competitor/ya-comment-album-10.jpg' alt=''>
+        <h2 style="position: absolute; bottom: 20px; left: 140px; z-index: 1000">15 строк</h2>
+        <h2 style="position: absolute; bottom: 20px; right: 220px; z-index: 1000">10 строк</h2>
+    </div>
+</section>
+
+<!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
+
+<section class='slide shout'>
+    <div class='slidein'>
+        <h2>Неточный<br> центр карты</h2>
+    </div>
+</section>
+
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Неточный центр<br>карты</h2>
 
         <div class='l l-abs l-map l-map-r'>
             <div class='next l-h'>Шапка</div>
@@ -1860,7 +2036,7 @@
 
 <section class='slide layout'>
     <div class='slidein'>
-        <h2>&laquo;Неверный&raquo; центр<br>карты</h2>
+        <h2>Неточный центр<br>карты</h2>
 
         <div class='l l-abs l-map l-map-r'>
             <div class='l-h'>Шапка</div>
@@ -1873,7 +2049,7 @@
 
 <section class='slide layout'>
     <div class='slidein'>
-        <h2>&laquo;Неверный&raquo; центр<br>карты</h2>
+        <h2>Неточный центр<br>карты</h2>
 
         <div class='l l-abs l-map l-map-r'>
             <div class='l-h'>Шапка</div>
@@ -1909,35 +2085,17 @@
     </div>
 </section>
 
-
-
-<!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
-
-
-
-
-
-
-
-
-
-
-
-
 <section class='slide layout'>
     <div class='slidein'>
         <h2>Переместить центр<br> карты</h2>
 
-        <pre class="small">
-            <code>&lt;style media="print and
-             (orientation:portrait)"&gt;</code>
-            <code>    .view .map {</code>
-            <code>        <mark>top: -35px</mark></code>
-            <code>    }</code>
+        <pre class="small" style="position: absolute; left: 3em">
+            <code>&lt;style media="print and (orientation:portrait)"&gt;</code>
+            <code>    .map {<mark>top: -35px</mark>}</code>
             <code>&lt;/style&gt;</code>
         </pre>
 
-        <div class='l l-abs l-map l-map-r'>
+        <div class='l l-abs l-map l-map-r' style="right: 100px;">
             <div class='l-h'>Шапка</div>
             <div class='l-c'></div>
             <div class='l-point' style="margin-top:  -95px;"></div>
@@ -1950,16 +2108,13 @@
     <div class='slidein'>
         <h2>Переместить центр<br> карты</h2>
 
-        <pre class="small">
-            <code>&lt;style media="print and
-             (orientation:portrait)"&gt;</code>
-            <code>    .view .map {</code>
-            <code>        <mark>top: 75px</mark></code>
-            <code>    }</code>
+        <pre class="small" style="position: absolute; left: 3em">
+            <code>&lt;style media="print and (orientation:portrait)"&gt;</code>
+            <code>    .map {<mark>top: 75px</mark>}</code>
             <code>&lt;/style&gt;</code>
         </pre>
 
-        <div class='l l-abs l-map l-map-r'>
+        <div class='l l-abs l-map l-map-r' style="right: 100px;">
             <div class='l-h'>Шапка</div>
             <div class='l-p'>Панорама</div>
             <div class='l-c'></div>
@@ -1980,7 +2135,6 @@
         </div>
     </div>
 </section>
-
 
 <section class='slide shout'>
     <div class='slidein'>

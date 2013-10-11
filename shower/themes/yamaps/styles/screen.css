@@ -354,6 +354,16 @@ a
     font-style: normal
 }
 
+.slide pre mark.one
+{
+    background: #8dfca2;
+}
+
+.slide pre mark.two
+{
+    background: #fcab5f;
+}
+
 .slide pre mark.important
 {
     background: #C00;
