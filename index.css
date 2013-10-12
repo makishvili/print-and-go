@@ -663,6 +663,11 @@ section:not(.slide-iframe)::before
     line-height: 360px;
 }
 
+.l-c-y
+{
+    background:  yellow;
+}
+
 .l-c img
 {
     position: absolute;
