@@ -455,10 +455,12 @@ section:not(.slide-iframe)::before
 .ya     { background-image:  url(pictures/browsers/ya.png); }
 .opera  { background-image:  url(pictures/browsers/opera.png); }
 .safari { background-image:  url(pictures/browsers/safari.png); }
+.blink { background-image:  url(pictures/browsers/blink.png);}
+.chromium{background-image:  url(pictures/browsers/chromium.png);}
 .bro.chrome { background-image:  url(pictures/browsers/chrome.png); width: 130px; height: 130px; margin-top:  -7px; }
 
-.bro.chromium{background-image:  url(pictures/browsers/chromium.png); width: 50px; height: 50px; }
 .bro.wk      {background-image:  url(pictures/browsers/wk.png);       width: 70px; height: 70px; }
+.bro.small   {width: 50px; height: 50px; }
 
 .bro
 {
@@ -527,6 +529,10 @@ section:not(.slide-iframe)::before
 
     font-family: "PT Sans Narrow";
     font-size:  40px;
+
+    -moz-text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    -webkit-text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
 }
 
 .layout .slidein
@@ -646,14 +652,30 @@ section:not(.slide-iframe)::before
 
 .l-c
 {
+    position: relative;
+    overflow: hidden;
     top: 105px;
     height:  360px;
     z-index:  5;
 
-    background:  yellow;
-
+    /*background:  yellow;*/
 
     line-height: 360px;
+}
+
+.l-c-y
+{
+    background:  yellow;
+}
+
+.l-c img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -365px 0 0 -385px;
+    width: 750px;
+    height: 750px;
 }
 
 .l-f
@@ -717,6 +739,12 @@ pre.small code
 {
     font-size:  60%;
     line-height:  30px !important;
+}
+
+pre.small-medium code
+{
+    font-size:  80%;
+    line-height:  40px !important;
 }
 
 pre.medium code
