@@ -658,8 +658,19 @@
         <img class='yashot yashot-p yashot-1' src='pictures/css2-zoom.png' alt=''>
 
         <div class='next'>
-            <div class='bro blink' style='left: 670px; top: 100px;'></div>
+            <div class='bro chromium' style='left: 670px; top: 100px;'></div>
         </div>
+    </div>
+</section>
+
+<section class='slide wide screen screen-ya'>
+    <div class='slidein'>
+        <div class='bro safari' style='left: 60px; top: 50px; width: 512px; height: 512px'></div>
+        <h2 style="font-size: 330%;position: absolute;left:7.5em;top: 1em">
+            Nitro<br><br>
+            WebCore<br><br>
+            Webkit2
+        </h2>
     </div>
 </section>
 
@@ -1876,6 +1887,23 @@
     </div>
 </section>
 
+<section class='slide layout'>
+    <div class='slidein'>
+        <h2>Хочется Element Queries:</h2>
+
+        <pre class="small-medium">
+            <code>.footer {</code>
+            <code>    position: absolute</code>
+            <code>    bottom: 0</code>
+            <code>}
+            </code>
+            <code>.footer and <mark>(min-width: 86px)</mark> {</code>
+            <code>    position: static</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
 <section class='slide cover'>
     <div class='slidein'>
         <img src='pictures/print-map-msk-btn2.jpg' alt=''>
@@ -1891,13 +1919,10 @@
             <code>    footer.addClass('footer_on-next-page');</code>
             <code>}</code>
         </pre>
-
         <pre class="small-medium">
-            <code>@media print {</code>
-            <code>    .footer_on-next-page {</code>
-            <code>        <mark class="comment">/* Отправляется на второй лист */</mark></code>
-            <code>        <mark>position: static</mark></code>
-            <code>    }</code>
+            <code><mark class="comment">/* Больше 86px — отправляется на второй лист */</mark></code>
+            <code>.footer_on-next-page {</code>
+            <code>    <mark>position: static</mark></code>
             <code>}</code>
         </pre>
     </div>
@@ -1926,37 +1951,29 @@
 
 <section class='slide layout'>
     <div class='slidein'>
-        <h2>Хочется изящества:</h2>
+        <h2>Хочется Media + Element Queries</h2>
 
         <pre class="small-medium">
-            <code>if ((footerHeight > <mark>160</mark> && page.orientation === <mark>'landscape'</mark>) ||
-    (footerHeight > <mark class="one">240</mark> && page.orientation === <mark class="one">'portrait'</mark>)) { </code>
-            <code>    footer.addClass('footer_on-next-page'); </code>
+            <code>@media print and (orientation: <mark>landscape</mark>) {</code>
+            <code>    .footer and <mark>(min-width: 160px)</mark> { position: static }</code>
+            <code>}
+            </code>
+            <code>@media print and (orientation: <mark class="one">portrait</mark>) {</code>
+            <code>    .footer and <mark class="one">(min-width: 240px)</mark> { position: static }</code>
             <code>}</code>
         </pre>
-
-        <figure style="position: absolute; bottom: 10px; color: gray;">
-            <blockquote><p>Изящество - изысканная, тонкая красота.</p></blockquote>
-            <figcaption>Толковый словарь Ушакова</figcaption>
-        </figure>
     </div>
 </section>
 
 <section class='slide layout'>
     <div class='slidein'>
-        <h2>Хочется изящества:</h2>
-
-        <pre class="small-medium" style="opacity: 0.5">
-            <code>if ((footerHeight > <mark>160</mark> && page.orientation === <mark>'landscape'</mark>) ||
-    (footerHeight > <mark class="one">240</mark> && page.orientation === <mark class="one">'portrait'</mark>)) { </code>
-            <code>    footer.addClass('footer_on-next-page'); </code>
-            <code>}</code>
-        </pre>
+        <h2>Наша красота:</h2>
 
         <pre class="small-medium">
             <code>if (footerHeight > <mark>160</mark>) { </code>
             <code>    footer.addClass('footer_on-next-page_<mark>for-landscape</mark>'); </code>
-            <code>}</code>
+            <code>}
+            </code>
             <code>if (footerHeight > <mark class="one">240</mark>) { </code>
             <code>    footer.addClass('footer_on-next-page_<mark class="one">for-portrait</mark>'); </code>
             <code>}</code>
@@ -1973,11 +1990,11 @@
             <code>&lt;div class="footer"&gt;&lt;/div&gt;
             </code>
             <code><mark class="comment">&lt;!-- Больше 160px --&gt;</mark></code>
-            <code>&lt;div class="footer <mark>footer_on-next-page_for-landscape</mark>"&gt;&lt;/div&gt;
+            <code>&lt;div class="footer footer_on-next-page_<mark>for-landscape</mark>"&gt;&lt;/div&gt;
             </code>
             <code><mark class="comment">&lt;!-- Больше 240px --&gt;</mark></code>
-            <code>&lt;div class="footer <mark>footer_on-next-page_for-landscape</mark>
-                   <mark class="one">footer_on-next-page_for-portrait</mark>"&gt;&lt;/div&gt;</code>
+            <code>&lt;div class="footer footer_on-next-page_<mark>for-landscape</mark>
+                   footer_on-next-page_<mark class="one">for-portrait</mark>"&gt;&lt;/div&gt;</code>
         </pre>
     </div>
 </section>
@@ -1990,35 +2007,14 @@
             <code>@media print {</code>
             <code>    <mark class="comment">/* Подвал меньше 160px */</mark></code>
             <code>    .footer { position: absolute; bottom: 0 }</code>
-            <code>}
-            </code>
-            <code>@media print and <mark>(orientation:landscape)</mark> {</code>
+            <code>} </code>
+            <code>@media print and (orientation:<mark>landscape</mark>) {</code>
             <code>    <mark class="comment">/* Больше 160px */</mark></code>
-            <code>    <mark>.footer_on-next-page_for-landscape</mark> { position: static }</code>
+            <code>    .footer_on-next-page_<mark>for-landscape</mark> { position: static }</code>
             <code>}</code>
-            <code>@media print and <mark class="one">(orientation:portrait)</mark> {</code>
+            <code>@media print and (orientation:<mark class="one">portrait</mark>) {</code>
             <code>    <mark class="comment">/* Больше 240px */</mark></code>
-            <code>    <mark class="one">.footer_on-next-page_for-portrait</mark> { position: static }</code>
-            <code>}</code>
-        </pre>
-    </div>
-</section>
-<section class='slide layout'>
-    <div class='slidein'>
-        <h2>Наша красота:</h2>
-
-        <pre class="small-medium">
-            <code>@media print {</code>
-            <code>    <mark class="comment">/* Подвал меньше 160px */</mark></code>
-            <code>    .footer { position: absolute; bottom: 0 }
-            </code>
-            <code>    <mark class="comment">/* Больше 160px */</mark></code>
-            <code>    <mark>.footer_on-next-page_for-landscape</mark> { position: static }</code>
-            <code>}
-            </code>
-            <code>@media print and <mark class="one">(orientation:portrait)</mark> {</code>
-            <code>    <mark class="comment">/* Больше 240px */</mark></code>
-            <code>    <mark class="one">.footer_on-next-page_for-portrait</mark> { position: static }</code>
+            <code>    .footer_on-next-page_<mark class="one">for-portrait</mark> { position: static }</code>
             <code>}</code>
         </pre>
     </div>
