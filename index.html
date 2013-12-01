@@ -11,7 +11,7 @@
 <body class='list'>
 <header class='caption'>
     <h1>
-        Распечатай Яндекс.Карты
+        Распечатай Яндекс.Карты!
     </h1>
     <p>Вадим Макишвили</p>
 </header>
@@ -21,7 +21,7 @@
         <img  class='bg msk' src='pictures/msk.png' alt=''>
 
         <span class='title'>
-            <div class='name'>Распечатай <span class='red'>Я</span>ндекс.<span class='green'>Карты</span></div>
+            <div class='name'>Распечатай <span class='red'>Я</span>ндекс.<span class='green'>Карты</span>!</div>
             <div class='author'>Вадим Макишвили</div>
         </span>
     </div>
@@ -611,7 +611,7 @@
 
 <section class='slide'>
     <div class='slidein'>
-        <h2>Javascript for printer?</h2>
+        <h2>Хочется красоты</h2>
 
         <pre>
             <code>if (<mark>page.orientation === 'landscape'</mark>) {</code>
@@ -624,12 +624,6 @@
             <code>    <mark class='comment'>// do something</mark></code>
             <code>}</code>
         </pre>
-
-<!--
-        <div class='next mask'>
-            <div class='mask-deny'></div>
-        </div>
--->
     </div>
 </section>
 
@@ -809,7 +803,7 @@
 
 <section class='slide'>
     <div class='slidein'>
-        <h2>@page</h2>
+        <h2>@page size</h2>
         <pre>
             <code><mark class='comment'>/* Принудительно задать ориентацию */</mark></code>
             <code>@page {</code>
@@ -823,54 +817,55 @@
 
 <section class='slide'>
     <div class='slidein'>
-        <h2>@page</h2>
+        <h2>@page name</h2>
         <pre>
-            <code><mark class='comment'>/* Группировать правила */</mark></code>
+            <code><mark class='comment'>/* Группировка свойств */</mark></code>
             <code>@page <mark>myName</mark> {</code>
+            <code>    font-size: 18px</code>
             <code>    padding: 10px</code>
             <code>} </code>
             <code>div {</code>
             <code>    page: <mark>myName</mark></code>
             <code>}</code>
         </pre>
-        <div class='bro opera' style='left: 740px; top: 430px'></div>
-        <div class='version'  style='left: 830px; top: 490px'>12</div>
     </div>
 </section>
 
 <section class='slide'>
     <div class='slidein'>
-        <h2>@page: фильтрация стилей для Opera</h2>
+        <h2>@page name. Фильтрация браузеров?</h2>
+
         <pre>
-            <code>@page {margin: 0}</code>
-            <code>@page <mark>operaPage</mark>  {margin: 0.5cm}
+            <code>@page <mark>chromePage</mark> { margin: 0 }</code>
+            <code>body.chrome { page: <mark>chromePage</mark> }
             </code>
-            <code>html.opera  body {</code>
-            <code>    page: <mark>operaPage</mark></code>
-            <code>}</code>
+            <code>@page <mark class="one">operaPage</mark> { margin: 5mm } </code>
+            <code>body.opera { page: <mark class="one">operaPage</mark> }</code>
+        </pre>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>@page name. Увы :(</h2>
+        <pre>
+            <code>@page { margin: 0 } </code>
+            <code><span style="visibility: hidden;">null</span>
+            </code>
+            <code>@page <mark class="one">operaPage</mark> { margin: 5mm }</code>
+            <code>body.opera { page: <mark class="one">operaPage</mark> }</code>
         </pre>
         <div class='bro opera' style='left: 740px; top: 430px'></div>
         <div class='version'  style='left: 830px; top: 490px'>12</div>
     </div>
 </section>
 
-<section class='slide qr'>
-    <div class='slidein'>
-        <h2>bolk@ &laquo;взламывает&raquo; Оперу</h2>
-
-        <div>
-            <img src='pictures/browsers/bolknote.gif' alt=''><br>
-            <a href='http://clck.ru/8hBQu'>http://clck.ru/8hBQu</a>
-        </div>
-    </div>
-</section>
-
 <section class='slide'>
     <div class='slidein'>
-        <h2>@page: фильтрация стилей для Firefox</h2>
+        <h2>@document: фильтруем Firefox</h2>
         <pre>
-            <code>@page {margin: 0}
-            </code>
+            <code>@page { margin: 0 } </code>
+            <code><span style="visibility: hidden;">null</span></code>
             <code><mark>@-moz-document regexp('*')</mark> {</code>
             <code>    @page {</code>
             <code>        margin-top: 1cm;</code>
@@ -924,20 +919,6 @@
             <div class='bro ie disabled' style='left: 830px; top: 500px'></div>
             <div class='version disabled' style='left: 920px; top: 560px'>8-</div>
         </div>
-    </div>
-</section>
-
-<section class='slide'>
-    <div class='slidein'>
-        <h2>Ориентация листа: а так?</h2>
-        <pre>
-            <code>min-aspect-ratio: 1/1  <mark class='comment'>/* <mark>screen-size</mark> is in landscape */</mark></code>
-            <code>max-aspect-ratio: 1/1  <mark class='comment'>/* <mark>screen-size</mark> is in portrait  */</mark>
-            </code>
-            <code>min-device-aspect-ratio: 1/1 <mark class='comment'>/* <mark>device</mark> is in landscape */</mark></code>
-            <code>max-device-aspect-ratio: 1/1 <mark class='comment'>/* <mark>device</mark> is in portrait  */</mark></code>
-        </pre>
-        <p class='note'><a href='Источник: http://www.quirksmode.org/blog/archives/2010/04/the_orientation.html'>http://www.quirksmode.org/blog/archives/2010/04/the_orientation.html</a></p>
     </div>
 </section>
 
@@ -1033,7 +1014,7 @@
 
         <pre class='small'>
             <code>div {</code>
-            <code>    <mark>position: absolute<mark></code>
+            <code>    <mark>position: absolute</mark></code>
             <code>    left: 0</code>
             <code>    right: 0</code>
             <code>}</code>
@@ -1732,7 +1713,9 @@
         </pre>
 
         <div class='bro blink'   style='left: 580px; top: 480px'></div>
+        <div class='version'  style='left: 660px; top: 540px'>25</div>
         <div class='bro safari'   style='left: 720px; top: 480px'></div>
+        <div class='version'  style='left: 810px; top: 540px'>6</div>
 
     </div>
 </section>
@@ -1766,7 +1749,9 @@
         </pre>
 
         <div class='bro blink'   style='left: 580px; top: 480px; z-index: 6;'></div>
+        <div class='version'  style='left: 660px; top: 540px; z-index: 6;'>25</div>
         <div class='bro safari'   style='left: 720px; top: 480px; z-index: 6;'></div>
+        <div class='version'  style='left: 810px; top: 540px; z-index: 6;'>6</div>
     </div>
 </section>
 
@@ -1812,7 +1797,7 @@
         <pre>
             <code><mark class='comment'>/* Обнулить поля */</mark></code>
             <code>@page {</code>
-            <code>    margin: 0</code>
+            <code>    margin: <mark class='important'>0</mark></code>
             <code>}</code>
         </pre>
 
@@ -1821,6 +1806,24 @@
         <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet-opera1.jpg' alt=''>
         <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
         <div class='version'  style='left: 500px; bottom: -10px'>12</div>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>@page</h2>
+        <pre>
+            <code><mark class='comment'>/* Обнулить поля */</mark></code>
+            <code>@page {</code>
+            <code>    margin: 0</code>
+            <code>}</code>
+        </pre>
+
+        <s><p class="note" style="font-size:  200%;"><em>Молодец!</em></p></s>
+
+        <img class='yashot yashot-p yashot-2' src='pictures/code/filled-sheet.jpg' alt=''>
+        <div class='bro opera'  style='left: 410px; bottom: 10px;'></div>
+        <div class='version'  style='left: 500px; bottom: -10px'>18+</div>
     </div>
 </section>
 
@@ -1857,6 +1860,121 @@
     </div>
 </section>
 
+<!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
+<section class='slide shout'>
+    <div class='slidein'>
+        <h2>Javascript<span class='smile green'>;)</span></h2>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>События печати</h2>
+
+        <ul>
+            <li>onBeforePrint</li>
+            <li>onAfterPrint</li>
+        </ul>
+
+        <div class='bro ie'   style='left: 380px; top: 320px'></div>
+        <div class='version'  style='left: 470px; top: 380px;'>5+</div>
+
+        <div class='bro ff'   style='left: 520px; top: 320px'></div>
+        <div class='version'  style='left: 620px; top: 380px;'>6+</div>
+
+        <div class="next">
+            <div class='bro safari disabled'   style='left: 660px; top: 320px'></div>
+            <div class='version'      style='left: 780px; top: 380px;'>не захотели</div>
+        </div>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>Match @media</h2>
+
+        <pre class="small-medium">
+            <code>if (window.matchMedia('<mark>screen</mark> and (min-width: 400px)').matches) {</code>
+            <code>    <mark class='comment'>// do something</mark></code>
+            <code>}</code>
+        </pre>
+
+        <div class='bro safari'   style='left: 660px; top: 320px'></div>
+        <div class='version'      style='left: 750px; top: 380px;'>5.1</div>
+
+        <div class="next">
+            <div class='bro opera'   style='left: 250px; top: 320px'></div>
+            <div class='version'  style='left: 330px; top: 380px;'>12</div>
+
+            <div class='bro ie'   style='left: 380px; top: 320px'></div>
+            <div class='version'  style='left: 470px; top: 380px;'>10</div>
+
+            <div class='bro ff'       style='left: 520px; top: 320px'></div>
+            <div class='version'  style='left: 620px; top: 380px;'>6+</div>
+
+
+            <div class='bro chrome'   style='left: 800px; top: 320px'></div>
+            <div class='version'      style='left: 900px; top: 380px;'>9+</div>
+        </div>
+
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>Помните, мечтали о красоте...</h2>
+        <h2 style="position: absolute; top: 380px">Неужели, сбылось? :)</h2>
+
+        <pre class="small-medium">
+            <code>if (<mark>page.orientation === 'landscape'</mark>) {</code>
+            <code>    <mark class='comment'>// do something</mark></code>
+            <code>}</code>
+        </pre>
+
+        <br>
+        <br>
+        <pre class="small-medium">
+            <code>if (window.matchMedia('<mark>print and (orientation: landscape)</mark>').matches) {</code>
+            <code>    <mark class='comment'>// do something</mark></code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class='slide'>
+    <div class='slidein'>
+        <h2>Match "@media print"</h2>
+
+        <pre class="small-medium">
+            <code>if (window.matchMedia('<mark>print and (orientation: landscape)</mark>').matches) {</code>
+            <code>    <mark class='comment'>// do something</mark></code>
+            <code>}</code>
+        </pre>
+
+        <div class='bro safari'   style='left: 660px; top: 320px'></div>
+        <div class='version'      style='left: 750px; top: 380px;'>5.1</div>
+        <div class='fade'         style='left: 660px; top: 320px; opacity: 1;'>
+            <div class='bro safari'></div>
+        </div>
+
+        <div class='bro chrome'   style='left: 800px; top: 320px'></div>
+        <div class='version'      style='left: 900px; top: 380px;'>9+</div>
+        <div class='fade'        style='left: 800px; top: 320px; opacity: 1;'>
+            <div class='bro chrome'></div>
+        </div>
+    </div>
+</section>
+
+<section class='slide qr'>
+    <div class='slidein'>
+        <h2 style="margin-bottom: 1em;">TJ VanToll<br>"Detecting Print Requests with JavaScript"</h2>
+
+        <div>
+            <img src='pictures/browsers/tjvantoll.png' alt='' style="margin-bottom: 0;"><br>
+            <a href='http://clck.ru/8vbdS'>http://clck.ru/8vbdS</a>
+        </div>
+    </div>
+</section>
 <!--  !!!!!!!!!!!!!!!!!!!!!!!  -->
 
 <section class='slide shout'>
@@ -1916,12 +2034,12 @@
 
         <pre class="small-medium">
             <code>if (footerHeight > 86) {</code>
-            <code>    footer.addClass('footer_on-next-page');</code>
+            <code>    footer.addClass('on-next-page');</code>
             <code>}</code>
         </pre>
         <pre class="small-medium">
             <code><mark class="comment">/* Больше 86px — отправляется на второй лист */</mark></code>
-            <code>.footer_on-next-page {</code>
+            <code>.foote.on-next-page {</code>
             <code>    <mark>position: static</mark></code>
             <code>}</code>
         </pre>
@@ -1954,11 +2072,11 @@
         <h2>Хочется Media + Element Queries</h2>
 
         <pre class="small-medium">
-            <code>@media print and (orientation: <mark>landscape</mark>) {</code>
+            <code>@media print and (orientation: landscape) {</code>
             <code>    .footer and <mark>(min-width: 160px)</mark> { position: static }</code>
             <code>}
             </code>
-            <code>@media print and (orientation: <mark class="one">portrait</mark>) {</code>
+            <code>@media print and (orientation: portrait) {</code>
             <code>    .footer and <mark class="one">(min-width: 240px)</mark> { position: static }</code>
             <code>}</code>
         </pre>
@@ -1970,12 +2088,12 @@
         <h2>Наша красота:</h2>
 
         <pre class="small-medium">
-            <code>if (footerHeight > <mark>160</mark>) { </code>
-            <code>    footer.addClass('footer_on-next-page_<mark>for-landscape</mark>'); </code>
+            <code>if (footerHeight > 160) { </code>
+            <code>    footer.addClass('on-next-page_<mark>for-landscape</mark>'); </code>
             <code>}
             </code>
-            <code>if (footerHeight > <mark class="one">240</mark>) { </code>
-            <code>    footer.addClass('footer_on-next-page_<mark class="one">for-portrait</mark>'); </code>
+            <code>if (footerHeight > 240) { </code>
+            <code>    footer.addClass('on-next-page_<mark class="one">for-portrait</mark>'); </code>
             <code>}</code>
         </pre>
     </div>
@@ -1990,11 +2108,11 @@
             <code>&lt;div class="footer"&gt;&lt;/div&gt;
             </code>
             <code><mark class="comment">&lt;!-- Больше 160px --&gt;</mark></code>
-            <code>&lt;div class="footer footer_on-next-page_<mark>for-landscape</mark>"&gt;&lt;/div&gt;
+            <code>&lt;div class="footer on-next-page_<mark>for-landscape</mark>"&gt;&lt;/div&gt;
             </code>
             <code><mark class="comment">&lt;!-- Больше 240px --&gt;</mark></code>
-            <code>&lt;div class="footer footer_on-next-page_<mark>for-landscape</mark>
-                   footer_on-next-page_<mark class="one">for-portrait</mark>"&gt;&lt;/div&gt;</code>
+            <code>&lt;div class="footer on-next-page_<mark>for-landscape</mark>
+                   on-next-page_<mark class="one">for-portrait</mark>"&gt;&lt;/div&gt;</code>
         </pre>
     </div>
 </section>
@@ -2010,11 +2128,11 @@
             <code>} </code>
             <code>@media print and (orientation:<mark>landscape</mark>) {</code>
             <code>    <mark class="comment">/* Больше 160px */</mark></code>
-            <code>    .footer_on-next-page_<mark>for-landscape</mark> { position: static }</code>
+            <code>    .footer.on-next-page_<mark>for-landscape</mark> { position: static }</code>
             <code>}</code>
             <code>@media print and (orientation:<mark class="one">portrait</mark>) {</code>
             <code>    <mark class="comment">/* Больше 240px */</mark></code>
-            <code>    .footer_on-next-page_<mark class="one">for-portrait</mark> { position: static }</code>
+            <code>    .footer.on-next-page_<mark class="one">for-portrait</mark> { position: static }</code>
             <code>}</code>
         </pre>
     </div>
@@ -3116,15 +3234,23 @@
 
 <section class="slide final">
     <div class='slidein'>
-        <h2>Распечатай <span class='red'>Я</span><span class='black'>ндекс.</span><span class='green'>Карты</span></h2>
+        <h2>Распечатай <span class='red'>Я</span><span class='black'>ндекс.</span><span class='green'>Карты</span>!</h2>
 
-        <p>Вадим&nbsp;Макишвили</p>
+        <p>
+            Вадим&nbsp;Макишвили
+            <br>
+            <a href="mailto:makishvili@yandex-team.ru">makishvili@yandex-team.ru</a>
+        </p>
 
-        <ul>
-            <li><a href="http://makishvili.com">makishvili.com</a></li>
-            <li><a href="mailto:makishvili@yandex-team.ru">makishvili@yandex-team.ru</a></li>
-        </ul>
-    <!--<p>Презентация: <a href="http://pepelsbey.net/pres/web-in-curves/">pepelsbey.net/pres/web-in-curves</a></p>-->
+        <!--
+                <ul>
+                    <li><a href="http://makishvili.com">makishvili.com</a></li>
+                    <li><a href="mailto:makishvili@yandex-team.ru">makishvili@yandex-team.ru</a></li>
+                </ul>
+        -->
+        <br>
+        <br>
+        <p>Презентация: <a href="makishvili.github.io/print-and-go/index.html">makishvili.github.io/print-and-go/index.html</a></p>
     </div>
 </section>
 
